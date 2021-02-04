@@ -37,5 +37,18 @@ namespace UnitTestProject.LogAn
 
             Assert.True(result);
         }
+
+        // parameterized tests
+        [TestCase("filewithbadextension.SLF", true)]
+        [TestCase("filewithbadextension.slf", true)]
+        [TestCase("filewithbadextension.foo", false)]
+        public void IsValidLogFileName_VariousExtension_ReturnTrue(string file, bool expected)
+        {
+            var analyzer = new LogAnalyzer();
+
+            var result = analyzer.IsValidLogFileName(file);
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }
