@@ -6,6 +6,9 @@ namespace UnitTestProject.LogAn
     {
         public bool IsValidLogFileName(string fileName)
         {
+            if (string.IsNullOrEmpty(fileName))
+                throw new ArgumentException("filename has to be provided");
+
             return fileName.EndsWith(".SLF", StringComparison.CurrentCultureIgnoreCase);
         }
     }

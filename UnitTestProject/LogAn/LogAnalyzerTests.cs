@@ -1,4 +1,6 @@
+using System;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace UnitTestProject.LogAn
 {
@@ -9,6 +11,12 @@ namespace UnitTestProject.LogAn
         public void SetUp()
         {
             _analyzer = new LogAnalyzer();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            _analyzer = null;
         }
 
         private LogAnalyzer _analyzer;
@@ -57,10 +65,18 @@ namespace UnitTestProject.LogAn
             Assert.AreEqual(expected, result);
         }
 
-        [TearDown]
-        public void TearDown()
+        [Test]
+        public void IsValidLogFileName_EmptyFileName_ThrowException()
         {
-            _analyzer = null;
+            var fileName = string.Empty;
+
+            ActualValueDelegate<bool> @delegate = () => _analyzer.IsValidLogFileName(fileName);
+
+            Assert.That(@delegate, Throws.TypeOf<ArgumentException>());
+            Assert.That(@delegate,
+                Throws.TypeOf<ArgumentException>().With.Message.EqualTo("filename has to be provided"));
+            Assert.That(@delegate, Throws.ArgumentException);
+            Assert.That(@delegate, Throws.ArgumentException.With.Message.EqualTo("filename has to be provided"));
         }
     }
 }
