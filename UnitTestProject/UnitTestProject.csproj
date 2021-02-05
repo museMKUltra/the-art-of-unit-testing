@@ -42,6 +42,8 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Calculator\MemCalculator.cs" />
+        <Compile Include="Calculator\MemCalculatorTests.cs" />
         <Compile Include="LogAn\LogAnalyzer.cs" />
         <Compile Include="LogAn\LogAnalyzerTests.cs" />
         <Compile Include="Tests.cs" />
