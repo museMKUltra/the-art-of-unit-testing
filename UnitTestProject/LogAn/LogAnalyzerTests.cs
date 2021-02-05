@@ -70,7 +70,7 @@ namespace UnitTestProject.LogAn
         public void IsValidLogFileName_EmptyFileName_ThrowException()
         {
             var fileName = string.Empty;
-            
+
             ActualValueDelegate<bool> @delegate = () => _analyzer.IsValidLogFileName(fileName);
 
             Assert.That(@delegate, Throws.TypeOf<ArgumentException>());
@@ -86,12 +86,22 @@ namespace UnitTestProject.LogAn
         public void IsValidLogFileName_EmptyFileName_ThrowExceptionToCatch()
         {
             var message = "filename has to be provided";
-            
+
             var exception = Assert.Catch<Exception>(() => _analyzer.IsValidLogFileName(String.Empty));
 
             StringAssert.Contains(message, exception.Message);
             Assert.That(exception.Message, Is.StringContaining(message)); // it's deprecated in the future version
             Assert.That(exception.Message, Does.Contain(message));
+        }
+
+        [Test]
+        [TestCase("badfile.foo", false)]
+        [TestCase("goodfile.slf", true)]
+        public void IsValidLogFileName_WhenCalled_ChangesWasLastFileNameValid(string file, bool excepted)
+        {
+            _analyzer.IsValidLogFileName(file);
+            
+            Assert.That(_analyzer.WasLastFileNameValid, Is.EqualTo(excepted));
         }
     }
 }
