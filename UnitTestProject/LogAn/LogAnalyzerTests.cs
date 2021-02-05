@@ -66,6 +66,7 @@ namespace UnitTestProject.LogAn
         }
 
         [Test]
+        [Category("Cases for exception verification")]
         public void IsValidLogFileName_EmptyFileName_ThrowException()
         {
             var fileName = string.Empty;
@@ -81,6 +82,7 @@ namespace UnitTestProject.LogAn
 
         [Test]
         [Ignore("this is another way to verify exception")]
+        [Category("Cases for exception verification")]
         public void IsValidLogFileName_EmptyFileName_ThrowExceptionToCatch()
         {
             var message = "filename has to be provided";
