@@ -69,7 +69,7 @@ namespace UnitTestProject.LogAn
         public void IsValidLogFileName_EmptyFileName_ThrowException()
         {
             var fileName = string.Empty;
-
+            
             ActualValueDelegate<bool> @delegate = () => _analyzer.IsValidLogFileName(fileName);
 
             Assert.That(@delegate, Throws.TypeOf<ArgumentException>());
@@ -80,10 +80,11 @@ namespace UnitTestProject.LogAn
         }
 
         [Test]
+        [Ignore("this is another way to verify exception")]
         public void IsValidLogFileName_EmptyFileName_ThrowExceptionToCatch()
         {
             var exception = Assert.Catch<Exception>(() => _analyzer.IsValidLogFileName(String.Empty));
-
+            
             StringAssert.Contains("filename has to be provided", exception.Message);
         }
     }
