@@ -78,5 +78,13 @@ namespace UnitTestProject.LogAn
             Assert.That(@delegate, Throws.ArgumentException);
             Assert.That(@delegate, Throws.ArgumentException.With.Message.EqualTo("filename has to be provided"));
         }
+
+        [Test]
+        public void IsValidLogFileName_EmptyFileName_ThrowExceptionToCatch()
+        {
+            var exception = Assert.Catch<Exception>(() => _analyzer.IsValidLogFileName(String.Empty));
+
+            StringAssert.Contains("filename has to be provided", exception.Message);
+        }
     }
 }
