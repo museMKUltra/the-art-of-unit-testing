@@ -83,9 +83,13 @@ namespace UnitTestProject.LogAn
         [Ignore("this is another way to verify exception")]
         public void IsValidLogFileName_EmptyFileName_ThrowExceptionToCatch()
         {
-            var exception = Assert.Catch<Exception>(() => _analyzer.IsValidLogFileName(String.Empty));
+            var message = "filename has to be provided";
             
-            StringAssert.Contains("filename has to be provided", exception.Message);
+            var exception = Assert.Catch<Exception>(() => _analyzer.IsValidLogFileName(String.Empty));
+
+            StringAssert.Contains(message, exception.Message);
+            Assert.That(exception.Message, Is.StringContaining(message)); // it's deprecated in the future version
+            Assert.That(exception.Message, Does.Contain(message));
         }
     }
 }
