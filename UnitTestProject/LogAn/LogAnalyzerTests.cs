@@ -5,6 +5,14 @@ namespace UnitTestProject.LogAn
     [TestFixture]
     public class LogAnalyzerTests
     {
+        [SetUp]
+        public void SetUp()
+        {
+            _analyzer = new LogAnalyzer();
+        }
+
+        private LogAnalyzer _analyzer;
+
         [Test]
         public void IsValidLogFileName_BadExtension_ReturnFalse()
         {
@@ -44,11 +52,15 @@ namespace UnitTestProject.LogAn
         [TestCase("filewithbadextension.foo", false)]
         public void IsValidLogFileName_VariousExtension_ReturnTrue(string file, bool expected)
         {
-            var analyzer = new LogAnalyzer();
-
-            var result = analyzer.IsValidLogFileName(file);
+            var result = _analyzer.IsValidLogFileName(file);
 
             Assert.AreEqual(expected, result);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            _analyzer = null;
         }
     }
 }
