@@ -50,6 +50,7 @@
         <Compile Include="LogAnChar3\FileExtensionManagerFactory.cs" />
         <Compile Include="LogAnChar3\LogAnalyzer.cs" />
         <Compile Include="LogAnChar3\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar3\LogAnalyzerUsingFactoryMethod.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
