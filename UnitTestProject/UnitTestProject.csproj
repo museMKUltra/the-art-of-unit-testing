@@ -46,6 +46,9 @@
         <Compile Include="Calculator\MemCalculatorTests.cs" />
         <Compile Include="LogAnChar2\LogAnalyzer.cs" />
         <Compile Include="LogAnChar2\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar3\FileExtensionManager.cs" />
+        <Compile Include="LogAnChar3\LogAnalyzer.cs" />
+        <Compile Include="LogAnChar3\LogAnalyzerTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
