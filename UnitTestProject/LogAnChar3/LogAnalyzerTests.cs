@@ -8,19 +8,23 @@ namespace UnitTestProject.LogAnChar3
         [SetUp]
         public void SetUp()
         {
-            _analyzer = new LogAnChar3.LogAnalyzer();
+            _manager = new FakeFileExtensionManager();
+            _logAnalyzer = new LogAnalyzer(_manager);
         }
 
-        private LogAnChar3.LogAnalyzer _analyzer;
+        private FakeFileExtensionManager _manager;
+        private LogAnalyzer _logAnalyzer;
 
         [Test]
-        public void IsValidLogFileName_GoodExtension_ReturnTrue()
+        [TestCase("filewithbadextension.slf", true)]
+        [TestCase("filewithbadextension.foo", false)]
+        public void IsValidLogFileName_GoodExtension_ReturnTrue(string fileName, bool expectedResult)
         {
-            var analyzer = new LogAnChar3.LogAnalyzer();
+            _manager.WillBeValid = expectedResult;
 
-            var result = analyzer.IsValidLogFileName("filewithbadextension.slf");
+            var result = _logAnalyzer.IsValidLogFileName(fileName);
 
-            Assert.That(result, Is.EqualTo(true));
+            Assert.That(result, Is.EqualTo(expectedResult));
         }
     }
 }

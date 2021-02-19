@@ -2,12 +2,12 @@ using System;
 
 namespace UnitTestProject.LogAnChar3
 {
-    internal interface IFileExtensionManager
+    public interface IFileExtensionManager
     {
         bool IsValid(string fileName);
     }
 
-    class FileExtensionManager : IFileExtensionManager
+    public class FileExtensionManager : IFileExtensionManager
     {
         public bool IsValid(string fileName)
         {
@@ -18,11 +18,13 @@ namespace UnitTestProject.LogAnChar3
         }
     }
 
-    class AlwaysValidFakeExtensionManager : IFileExtensionManager
+    class FakeFileExtensionManager : IFileExtensionManager
     {
+        public bool WillBeValid = false;
+
         public bool IsValid(string fileName)
         {
-            return true;
+            return WillBeValid;
         }
     }
 }
