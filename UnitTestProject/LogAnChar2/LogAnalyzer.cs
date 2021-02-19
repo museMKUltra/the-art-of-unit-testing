@@ -1,6 +1,6 @@
 using System;
 
-namespace UnitTestProject.LogAn
+namespace UnitTestProject.LogAnChar2
 {
     public class LogAnalyzer
     {

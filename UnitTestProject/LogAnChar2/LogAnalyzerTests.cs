@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
 
-namespace UnitTestProject.LogAn
+namespace UnitTestProject.LogAnChar2
 {
     [TestFixture]
     public class LogAnalyzerTests
