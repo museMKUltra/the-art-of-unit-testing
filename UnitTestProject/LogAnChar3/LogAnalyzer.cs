@@ -20,5 +20,10 @@ namespace UnitTestProject.LogAnChar3
         {
             return Manager.IsValid(fileName);
         }
+
+        public bool IsValidLogFileName3(string fileName, IFileExtensionManager manager)
+        {
+            return manager.IsValid(fileName);
+        }
     }
 }
