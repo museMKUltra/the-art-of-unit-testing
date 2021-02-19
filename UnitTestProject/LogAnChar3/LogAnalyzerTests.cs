@@ -56,5 +56,20 @@ namespace UnitTestProject.LogAnChar3
 
             Assert.That(result, Is.EqualTo(isValid));
         }
+
+        [Test]
+        [TestCase("filewithbadextension.slf", true)]
+        [TestCase("filewithbadextension.foo", false)]
+        public void IsValidLogFileName4_WhenCalled_ReturnExpectedValue(string fileName, bool isValid)
+        {
+            var manager = new FakeFileExtensionManager();
+            FileExtensionManagerFactory.SetManager(manager);
+            var logAnalyzer = new LogAnalyzer();
+            manager.WillBeValid = isValid;
+
+            var result = logAnalyzer.IsValidLogFileName4(fileName);
+
+            Assert.That(result, Is.EqualTo(isValid));
+        }
     }
 }
