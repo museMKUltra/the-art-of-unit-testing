@@ -52,6 +52,10 @@
         <Compile Include="LogAnChar3\LogAnalyzerTests.cs" />
         <Compile Include="LogAnChar3\LogAnalyzerUsingFactoryMethod.cs" />
         <Compile Include="LogAnChar3\LogAnalyzerUsingFactoryMethodWithoutStub.cs" />
+        <Compile Include="LogAnChar4\FakeEmailService.cs" />
+        <Compile Include="LogAnChar4\FakeWebService.cs" />
+        <Compile Include="LogAnChar4\LogAnalyzer.cs" />
+        <Compile Include="LogAnChar4\LogAnalyzerTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
