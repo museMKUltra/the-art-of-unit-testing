@@ -7,7 +7,7 @@ namespace UnitTestProject.LogAnChar4
         public IEmailService Email { get; set; }
         public IWebService Service { get; set; }
 
-        public LogAnalyzer( FakeWebService service, IEmailService email)
+        public LogAnalyzer(IWebService service, IEmailService email)
         {
             Email = email;
             Service = service;
