@@ -23,7 +23,13 @@ namespace UnitTestProject.LogAnChar4
                 }
                 catch (Exception e)
                 {
-                    Email.SendEmail("someone@somewhere.com", "can't log", e.Message);
+                    var emailInfo = new EmailInfo
+                    {
+                        To = "someone@somewhere.com",
+                        Subject = "can't log",
+                        Body = e.Message
+                    };
+                    Email.SendEmail(emailInfo);
                 }
             }
         }

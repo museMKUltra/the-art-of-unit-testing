@@ -1,21 +1,32 @@
+using System;
+
 namespace UnitTestProject.LogAnChar4
 {
     public interface IEmailService
     {
-        void SendEmail(string to, string subject, string body);
+        void SendEmail(EmailInfo email);
     }
 
     public class FakeEmailService : IEmailService
     {
-        public string To { get; set; }
-        public string Subject { get; set; }
-        public string Body { get; set; }
+        public EmailInfo Email = null;
 
-        public void SendEmail(string to, string subject, string body)
+        public void SendEmail(EmailInfo email)
         {
-            To = to;
-            Subject = subject;
-            Body = body;
+            Email = email;
+        }
+    }
+
+    public class EmailInfo : IEquatable<EmailInfo>
+    {
+        public string To;
+        public string Subject;
+        public string Body;
+
+        public bool Equals(EmailInfo otherEmail)
+        {
+            if (otherEmail is null) return false;
+            return otherEmail.To == To && otherEmail.Subject == Subject && otherEmail.Body == Body;
         }
     }
 }

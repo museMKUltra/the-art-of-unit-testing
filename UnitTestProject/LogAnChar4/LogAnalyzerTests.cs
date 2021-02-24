@@ -16,9 +16,14 @@ namespace UnitTestProject.LogAnChar4
             const string tooShortFileName = "abc.ext";
             logAnalyzer.Analyze(tooShortFileName);
 
-            Assert.That(mockEmail.To, Is.EqualTo("someone@somewhere.com"));
-            Assert.That(mockEmail.Subject, Is.EqualTo("can't log"));
-            Assert.That(mockEmail.Body, Is.EqualTo("fake exception"));
+            var expectedEmail = new EmailInfo
+            {
+                To = "someone@somewhere.com",
+                Subject = "can't log",
+                Body = "fake exception",
+            };
+            Assert.That(mockEmail.Email, Is.EqualTo(expectedEmail));
+            // Assert.AreEqual(expectedEmail, mockEmail.Email);
         }
     }
 }
