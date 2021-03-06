@@ -82,6 +82,8 @@
         <Compile Include="LogAnChar5\DynamicCreating\FakeWebService.cs" />
         <Compile Include="LogAnChar5\DynamicCreating\LogAnalyzer.cs" />
         <Compile Include="LogAnChar5\DynamicCreating\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar5\SimulatedValue\FileNameRules.cs" />
+        <Compile Include="LogAnChar5\SimulatedValue\FileNameRulesTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
