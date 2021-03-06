@@ -28,16 +28,16 @@ namespace UnitTestProject.LogAnChar5.SimulatedValue
         [Test]
         public void IsValidLogFileName_ArgAny_Throws()
         {
-            // var fakeRules = Substitute.For<IFileNameRules>();
-            // fakeRules
-            //     .When(r => r.IsValidLogFileName(Arg.Any<string>()))
-            //     .Do(context => throw new Exception("fake exception"));
+            var fakeRules = Substitute.For<IFileNameRules>();
+            fakeRules
+                .When(r => r.IsValidLogFileName(Arg.Any<string>()))
+                .Do(context => throw new Exception("fake exception"));
             // ---
-            var fakeRules = new Mock<IFileNameRules>();
-            fakeRules.Setup(r => r.IsValidLogFileName(It.IsAny<string>())).Throws<Exception>();
+            // var fakeRules = new Mock<IFileNameRules>();
+            // fakeRules.Setup(r => r.IsValidLogFileName(It.IsAny<string>())).Throws<Exception>();
 
-            // Assert.Throws<Exception>(() => fakeRules.IsValidLogFileName("anything"));
-            Assert.That(() => fakeRules.Object.IsValidLogFileName("anything"), Throws.Exception);
+            Assert.Throws<Exception>(() => fakeRules.IsValidLogFileName("anything"));
+            // Assert.That(() => fakeRules.Object.IsValidLogFileName("anything"), Throws.Exception);
         }
     }
 }
