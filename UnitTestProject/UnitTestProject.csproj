@@ -79,9 +79,9 @@
         <Compile Include="LogAnChar4\FakeWebService.cs" />
         <Compile Include="LogAnChar4\LogAnalyzer.cs" />
         <Compile Include="LogAnChar4\LogAnalyzerTests.cs" />
-        <Compile Include="LogAnChar5\FakeWebService.cs" />
-        <Compile Include="LogAnChar5\LogAnalyzer.cs" />
-        <Compile Include="LogAnChar5\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar5\DynamicCreating\FakeWebService.cs" />
+        <Compile Include="LogAnChar5\DynamicCreating\LogAnalyzer.cs" />
+        <Compile Include="LogAnChar5\DynamicCreating\LogAnalyzerTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

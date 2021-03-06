@@ -1,4 +1,4 @@
-namespace UnitTestProject.LogAnChar5
+namespace UnitTestProject.LogAnChar5.DynamicCreating
 {
     public interface IWebService
     {

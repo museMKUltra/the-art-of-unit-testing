@@ -1,8 +1,6 @@
-using Moq;
-using NSubstitute;
 using NUnit.Framework;
 
-namespace UnitTestProject.LogAnChar5
+namespace UnitTestProject.LogAnChar5.DynamicCreating
 {
     [TestFixture]
     public class LogAnalyzerTests
