@@ -82,6 +82,7 @@
         <Compile Include="LogAnChar5\DynamicCreating\FakeWebService.cs" />
         <Compile Include="LogAnChar5\DynamicCreating\LogAnalyzer.cs" />
         <Compile Include="LogAnChar5\DynamicCreating\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar5\SimulatedValue\ErrorInfo.cs" />
         <Compile Include="LogAnChar5\SimulatedValue\FakeLogger.cs" />
         <Compile Include="LogAnChar5\SimulatedValue\FakeWebService.cs" />
         <Compile Include="LogAnChar5\SimulatedValue\FileNameRules.cs" />

@@ -26,6 +26,9 @@ namespace UnitTestProject.LogAnChar5.SimulatedValue
                 catch (Exception e)
                 {
                     _webService.Write("Error From Logger: " + e);
+
+                    var errorInfo = new ErrorInfo(1000, "Error From Logger: " + e);
+                    _webService.WriteErrorInfo(errorInfo);
                 }
             }
         }
