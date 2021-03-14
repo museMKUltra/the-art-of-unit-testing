@@ -9,7 +9,6 @@ namespace UnitTestProject.LogAnChar5.SimulatedValue
     public class LogAnalyzerTests
     {
         [Test]
-        [Ignore("ok")]
         public void Analyze_LoggerThrows_CallWebService()
         {
             var mockWebService = new FakeWebService();
