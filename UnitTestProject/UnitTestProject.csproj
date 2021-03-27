@@ -93,11 +93,20 @@
         <Compile Include="LogAnChar5\SimulatedValue\FileNameRulesTests.cs" />
         <Compile Include="LogAnChar5\SimulatedValue\LogAnalyzer.cs" />
         <Compile Include="LogAnChar5\SimulatedValue\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar7\CrossCuttingConcern\SystemTime.cs" />
+        <Compile Include="LogAnChar7\CrossCuttingConcern\TimeLogger.cs" />
+        <Compile Include="LogAnChar7\CrossCuttingConcern\TimeLoggerTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ConsoleApplication\ConsoleApplication.csproj">
+        <Project>{409019a1-d5c4-45ed-b0a0-63ba7fc7ba4b}</Project>
+        <Name>ConsoleApplication</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
