@@ -96,6 +96,11 @@
         <Compile Include="LogAnChar7\CrossCuttingConcern\SystemTime.cs" />
         <Compile Include="LogAnChar7\CrossCuttingConcern\TimeLogger.cs" />
         <Compile Include="LogAnChar7\CrossCuttingConcern\TimeLoggerTests.cs" />
+        <Compile Include="LogAnChar7\DontRepeatYourself\ConfigurationManager.cs" />
+        <Compile Include="LogAnChar7\DontRepeatYourself\ConfigurationManagerTests.cs" />
+        <Compile Include="LogAnChar7\DontRepeatYourself\LogAnalyzer.cs" />
+        <Compile Include="LogAnChar7\DontRepeatYourself\LogAnalyzerTests.cs" />
+        <Compile Include="LogAnChar7\DontRepeatYourself\LoggingFacility.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
