@@ -5,7 +5,7 @@ namespace UnitTestProject.LogAnChar7.TemplateTestClassPattern
     [TestFixture]
     public class XmlStringParserTests : TemplateStringParserTests
     {
-        protected XmlStringParser GetParser(string input)
+        protected IStringParser GetParser(string input)
         {
             return new XmlStringParser(input);
         }
