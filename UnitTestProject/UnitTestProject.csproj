@@ -106,6 +106,9 @@
         <Compile Include="LogAnChar7\DontRepeatYourself\TestsInBase\LogAnalyzerTests.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\StandardStringParser.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\StandardStringParserTests.cs" />
+        <Compile Include="LogAnChar7\TemplateTestClassPattern\TemplateStringParserTests.cs" />
+        <Compile Include="LogAnChar7\TemplateTestClassPattern\XmlStringParser.cs" />
+        <Compile Include="LogAnChar7\TemplateTestClassPattern\XmlStringParserTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
