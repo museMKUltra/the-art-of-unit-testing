@@ -1,6 +1,7 @@
 using NUnit.Framework;
+using UnitTestProject.LogAnChar7.TemplateTestClassPattern;
 
-namespace UnitTestProject.LogAnChar7.TemplateTestClassPattern
+namespace UnitTestProject.LogAnChar7.FillTheBlanks
 {
     [TestFixture]
     public abstract class FillInTheBlanksStringParserTests

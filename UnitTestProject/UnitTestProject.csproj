@@ -104,12 +104,12 @@
         <Compile Include="LogAnChar7\DontRepeatYourself\TestsInBase\BaseTestsClass.cs" />
         <Compile Include="LogAnChar7\DontRepeatYourself\TestsInBase\ConfigurationManagerTests.cs" />
         <Compile Include="LogAnChar7\DontRepeatYourself\TestsInBase\LogAnalyzerTests.cs" />
-        <Compile Include="LogAnChar7\TemplateTestClassPattern\FillInTheBlanksStringParserTests.cs" />
+        <Compile Include="LogAnChar7\FillTheBlanks\FillInTheBlanksStringParserTests.cs" />
+        <Compile Include="LogAnChar7\FillTheBlanks\XmlStringParserFillTests.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\StandardStringParser.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\StandardStringParserTests.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\TemplateStringParserTests.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\XmlStringParser.cs" />
-        <Compile Include="LogAnChar7\TemplateTestClassPattern\XmlStringParserFillTests.cs" />
         <Compile Include="LogAnChar7\TemplateTestClassPattern\XmlStringParserTests.cs" />
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
